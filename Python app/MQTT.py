@@ -178,6 +178,8 @@ def conexion(client, userdata, flags, rc):
     print('Conexion establecida (%s)' % client._client_id)
     client.subscribe(general, qos =2)
     client.subscribe(AA, qos =2)
+    client.subscribe(AB, qos =2)
+    client.subscribe(AC, qos =2)
 #----------------------------#
 def mensaje(client, userdata, message):
     msg = str(message.payload.decode("utf-8"))
