@@ -16,28 +16,31 @@ def Led_asig(Aula, dia, block):  # db of Aula('AA'...), dia(Lunes...), block('A'
         state = 'on'
     else:
         state = 'off'
-    return state, Aula
+    print(state)
+    return state
 #------------ Block msg --------------------------#
+bloc = 0
 def bloque():
     dia = '{:%a}'.format(now)  # dia
+    global bloc
     if hora in range(7, 9):
-        blo = 'A'
+        bloc = 'A'
     elif hora in range (9, 11):
-        blo = 'B'
+        bloc = 'B'
     elif hora in range(11, 13):
-        blo = 'C'
+        bloc = 'C'
     elif hora in range(14, 16):
-        blo = 'D'
-    elif hora in range(16, 18):
-        blo = 'E'
+        bloc = 'D'
+    elif hora in range(16, 20):
+        bloc = 'E'
     #-------------------------#
-    if   dia == 'Mon': dia = 1
-    elif dia == 'Tue': dia = 2
-    elif dia == 'Wed': dia = 3
-    elif dia == 'Thu': dia = 4
-    elif dia == 'Fri': dia = 5
+    if   dia == 'Mon': dayx = 1
+    elif dia == 'Tue': dayx = 2
+    elif dia == 'Wed': dayx = 3
+    elif dia == 'Thu': dayx = 4
+    elif dia == 'Fri': dayx = 5
     #-------------------------#
-    return blo, dia
+    return bloc, dayx
 #-------------------------------------------------#
 # print(Fecha)
 # print(dia)
