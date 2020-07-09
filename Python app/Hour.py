@@ -31,7 +31,7 @@ def bloque():
         bloc = 'C'
     elif hora in range(14, 16):
         bloc = 'D'
-    elif hora in range(16, 20):
+    elif hora in range(16, 18):
         bloc = 'E'
     #-------------------------#
     if   dia == 'Mon': dayx = 1
